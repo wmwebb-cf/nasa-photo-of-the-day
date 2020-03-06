@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 
 
@@ -8,7 +8,8 @@ const ImgContent = props => {
   return (
     <div>
       <h3>Title: {props.title}</h3>
-      <p>Description: {props.description}</p>
+      <h5>Description:</h5>
+      <p>{props.description}</p>
       <small>DATE: {props.date}</small>
     </div>
   )

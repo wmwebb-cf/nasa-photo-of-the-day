@@ -6,6 +6,7 @@ import ImgContent from "./ImageContent.js";
 
 
 
+
 function ImgOfTheDay() {
 
   const [newImage, setNewImage] = useState([]);
@@ -13,16 +14,17 @@ function ImgOfTheDay() {
   useEffect(() => {
     axios.get('https://api.nasa.gov/planetary/apod?api_key=PsEckfvuFPxza549BtvnhaC7hZhW5PM4s3kIF9pf').then(response => {
       setNewImage(response.data);
-      console.log(response.data);
+      // console.log(response.data);
     });
   }, []);
   // console.log(newImage.url);
 
   return (
     <div>
-      <ImgCard url={newImage.url}/>,
 
+      <ImgCard url={newImage.url} />
       <ImgContent title={newImage.title} description={newImage.explanation} date={newImage.date}/>
+
     </div>
   );
 
