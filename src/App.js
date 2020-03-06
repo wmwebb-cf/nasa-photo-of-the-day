@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
+import ImgOfTheDay from "./components/ImgOfTheDay.js";
+// import ImgCard from "./components/ImageCard.js";
+// import ImgContent from "./components/ImageContent.js";
+// import axios from "axios";
+
 
 function App() {
+
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <ImgOfTheDay />
     </div>
   );
 }
